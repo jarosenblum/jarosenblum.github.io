@@ -21,7 +21,9 @@ Portfolio site, built with Jekyll on GitHub Pages (served from `main`, repo root
 - A repo link renders only when `repo_public_audited: true`.
 - No `[P3` placeholder copy and no `placeholder: true` at publish time.
 
-Run locally: `ruby scripts/check_cases.rb` (or `--allow-placeholders` while scaffolding).
+Run locally: `ruby scripts/check_cases.rb`. Before launch (`launched: false` in
+`_config.yml`) it skips the placeholder-copy checks; `--strict` forces the full
+publish gate. Setting `launched: true` also removes the pre-launch `noindex` tag.
 
 ## Downloads
 

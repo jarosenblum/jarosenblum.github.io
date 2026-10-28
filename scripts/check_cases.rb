@@ -12,7 +12,12 @@ require "yaml"
 require "date"
 
 ROOT = File.expand_path("..", __dir__)
-allow_placeholders = ARGV.include?("--allow-placeholders")
+# Strict (publish) mode once _config.yml has `launched: true`, or with --strict.
+# Before launch, P3-copy checks are skipped so scaffold pushes stay green;
+# structural rules (link modes, alt text, audited repo links, strand ids) always run.
+launched = (YAML.safe_load(File.read(File.join(ROOT, "_config.yml"))) || {})["launched"] == true
+allow_placeholders = ARGV.include?("--allow-placeholders") || (!launched && !ARGV.include?("--strict"))
+puts "check_cases: #{allow_placeholders ? 'pre-launch mode (placeholder copy allowed)' : 'publish mode'}"
 
 strand_ids = YAML.safe_load(File.read(File.join(ROOT, "_data/strands.yml"))).map { |s| s["id"] }
 required = %w[title summary audience status link_mode tools division_of_labor dates]
