@@ -1,0 +1,16 @@
+{%- assign c = include.case -%}
+{%- assign first = c.screenshots | first -%}
+<li class="case-row">
+  <a class="case-row__thumb" href="{{ c.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {%- if first and first.src and first.src != "" %}
+    <img src="{{ first.src | relative_url }}" alt="" loading="lazy" width="640" height="400">
+    {%- else %}
+    <span class="thumb-missing">Screenshot pending</span>
+    {%- endif %}
+  </a>
+  <div class="case-row__body">
+    <h3 class="case-row__title"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h3>
+    <p class="case-row__summary">{{ c.summary | default: "[P3: one-line summary]" }}</p>
+    {% include link-badge.html case=c %}
+  </div>
+</li>

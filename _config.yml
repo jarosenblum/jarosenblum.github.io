@@ -1,0 +1,38 @@
+# Site configuration — user site, served from the main branch root (D1, D2).
+title: Jason Rosenblum
+description: AI and education portfolio
+url: "https://jarosenblum.github.io"
+baseurl: ""
+lang: en
+# Address used by "Request a key" buttons. Left empty on purpose until the
+# owner confirms which address to publish; the button renders as a notice
+# instead of a link while this is empty.
+contact_email: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+collections:
+  case_studies:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - _case_studies/_TEMPLATE.md

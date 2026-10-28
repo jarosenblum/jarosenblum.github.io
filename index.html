@@ -1,0 +1,42 @@
+---
+layout: default
+title: Home
+---
+{%- assign cases = site.case_studies | sort: "order" -%}
+<section class="hero wrap" aria-labelledby="hero-heading">
+  <h1 id="hero-heading" class="hero__name">{{ site.title }}</h1>
+  <p class="hero__lede placeholder">[P3: one sentence — what I build, for whom, and why it matters for learning.]</p>
+
+  <ul class="contact-sheet" tabindex="0" aria-label="Screens from the work">
+    {%- for c in cases limit: 5 %}
+    {%- assign first = c.screenshots | first %}
+    <li class="contact-sheet__frame">
+      <a href="{{ c.url | relative_url }}">
+        {%- if first and first.src and first.src != "" %}
+        <img src="{{ first.src | relative_url }}" alt="{{ first.alt }}" width="640" height="400">
+        {%- else %}
+        <span class="thumb-missing">Screenshot pending</span>
+        {%- endif %}
+        <span class="contact-sheet__label">{{ c.title }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="wrap home-narrative" aria-labelledby="narrative-heading">
+  <div class="measure">
+    <h2 id="narrative-heading">What this portfolio shows</h2>
+    <p class="placeholder">[P3: about 150 words. Lead with what was built, for whom, and what it changed.]</p>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="selected-heading">
+  <h2 id="selected-heading">Selected work</h2>
+  <ul class="case-list">
+    {%- for c in cases %}
+    {% include case-row.html case=c %}
+    {%- endfor %}
+  </ul>
+  <p><a href="{{ '/work/' | relative_url }}">All work, including early builds</a></p>
+</section>

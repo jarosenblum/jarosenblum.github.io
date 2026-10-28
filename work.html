@@ -1,0 +1,43 @@
+---
+layout: default
+title: Work
+permalink: /work/
+---
+{%- assign cases = site.case_studies | sort: "order" -%}
+<div class="wrap page-top">
+  <h1>Work</h1>
+  <p class="measure placeholder">[P3: one or two sentences on how to read this page — what Live, Walkthrough, and Excerpt mean.]</p>
+
+  <section aria-labelledby="cases-heading">
+    <h2 id="cases-heading">Case studies</h2>
+    <ul class="case-list">
+      {%- for c in cases %}
+      {% include case-row.html case=c %}
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="early" aria-labelledby="early-heading">
+    <h2 id="early-heading">Early builds</h2>
+    <p class="measure placeholder">[P3: one sentence framing the strip as the path that led here.]</p>
+    <ol class="early-strip" tabindex="0" aria-label="Early builds, oldest first">
+      {%- for b in site.data.early_builds %}
+      <li class="early-card">
+        <div class="early-card__shot">
+          {%- if b.screenshot and b.screenshot != "" %}
+          <img src="{{ b.screenshot | relative_url }}" alt="{{ b.alt }}" loading="lazy" width="480" height="300">
+          {%- else %}
+          <span class="thumb-missing">Screenshot pending</span>
+          {%- endif %}
+        </div>
+        <p class="early-card__date">{{ b.date | default: "[date]" }}</p>
+        <h3 class="early-card__name">
+          {%- if b.link and b.link != "" %}<a href="{{ b.link }}">{{ b.name }}</a>{% else %}{{ b.name }}{% endif %}
+        </h3>
+        {%- if b.label %}<p class="badge badge--caution">{{ b.label }}</p>{% endif %}
+        <p class="early-card__note">{{ b.note }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+</div>

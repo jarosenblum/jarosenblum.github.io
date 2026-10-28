@@ -1,0 +1,29 @@
+{%- comment -%}
+  Every app gets 3–5 screenshots, live or not. Missing or alt-less screenshots
+  render a visible notice so a gap can't ship silently; scripts/check_cases.rb
+  fails on the same conditions.
+{%- endcomment -%}
+{%- assign shots = include.case.screenshots -%}
+<section class="gallery" aria-labelledby="gallery-heading">
+  <h2 id="gallery-heading">Screens</h2>
+  {%- if shots and shots.size > 0 %}
+  <div class="gallery__track" tabindex="0" role="group" aria-label="Screenshots">
+    {%- for s in shots %}
+    <figure class="shot">
+      {%- if s.src and s.src != "" and s.alt and s.alt != "" %}
+      <a class="shot__frame" href="{{ s.src | relative_url }}">
+        <img src="{{ s.src | relative_url }}" alt="{{ s.alt }}" loading="lazy" width="1600" height="1000">
+      </a>
+      {%- else %}
+      <div class="shot__frame shot__frame--missing" role="img" aria-label="Screenshot not added yet">
+        <span>Screenshot {{ forloop.index }} not added yet{% if s.src and s.src != "" %} (alt text missing){% endif %}</span>
+      </div>
+      {%- endif %}
+      {%- if s.caption %}<figcaption>{{ s.caption }}</figcaption>{% endif %}
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <p class="notice notice--missing">No screenshots yet. Every case needs 3 to 5 before publishing.</p>
+  {%- endif %}
+</section>

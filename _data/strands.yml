@@ -1,0 +1,12 @@
+# Approach-page research strands (D5). Case studies reference these by id in
+# `aied_strands`; scripts/check_cases.rb rejects unknown ids.
+- id: ai-literacy
+  label: Humanizing AIED and AI literacy
+- id: workforce
+  label: AI-enabled workforce preparation
+- id: assessment
+  label: Assessment, feedback, and scaffolding with AI
+- id: game-based
+  label: Game-based and immersive learning
+- id: adoption
+  label: Adoption and change

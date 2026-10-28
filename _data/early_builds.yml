@@ -1,0 +1,34 @@
+# "Early builds" strip on the Work page. Ordered oldest first by verified date
+# (git history or CV) — dates are filled in P3, never estimated.
+# link_mode: live | screenshots ; label: optional caution label shown on the card.
+- name: Pre-AI design projects
+  note: "[P3: Alien Rescue, Syria Simulation, East Cesar Chavez (ARIS), Plato's Cave — URLs pending]"
+  date: ""
+  link: ""
+  screenshot: ""
+- name: OdinAI experiments
+  note: "[P3]"
+  date: ""
+  link: ""            # no repo link while student-labeled pages remain (registry C2)
+  screenshot: ""      # GenAICompare page only
+- name: SQL Coach
+  note: "[P3]"
+  date: ""
+  link: ""
+  screenshot: ""
+- name: Job Optimizer
+  label: Early alpha build
+  note: "[P3]"
+  date: ""
+  link: ""
+  screenshot: ""
+- name: Teaching demos
+  note: "[P3]"
+  date: ""
+  link: ""
+  screenshot: ""
+- name: Relaxing Patterns
+  note: "[P3]"
+  date: ""
+  link: ""
+  screenshot: ""

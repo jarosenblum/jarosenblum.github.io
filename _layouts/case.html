@@ -1,0 +1,84 @@
+---
+layout: default
+---
+{%- assign c = page -%}
+<article class="case">
+  <header class="case-head wrap">
+    <p class="case-head__back"><a href="{{ '/work/' | relative_url }}">All work</a></p>
+    <h1>{{ c.title }}</h1>
+    <p class="case-head__summary">{{ c.summary | default: "[P3: one-line summary — what it is and who it is for]" }}</p>
+    {% include link-badge.html case=c %}
+
+    {%- if c.caveat and c.caveat != "" %}
+    <aside class="caveat" aria-label="Before you try it">
+      <p>{{ c.caveat }}</p>
+    </aside>
+    {%- elsif c.status == "beta" or c.status == "early alpha" or c.paid_key %}
+    <aside class="caveat caveat--missing" aria-label="Missing caveat">
+      <p>[Caveat required: this case is {{ c.status }}{% if c.paid_key %} and runs on a paid key{% endif %}.]</p>
+    </aside>
+    {%- endif %}
+
+    {%- assign has_actions = false -%}
+    {%- if c.links.live or c.downloads or c.request_key or c.links.repo or c.link_mode == "live" -%}{%- assign has_actions = true -%}{%- endif -%}
+    {%- if has_actions %}
+    <div class="actions">
+      {%- if c.links.live and c.links.live != "" %}
+      <a class="button button--primary" href="{{ c.links.live }}">Try it live</a>
+      {%- elsif c.link_mode == "live" %}
+      <span class="notice notice--missing">[Live link not set]</span>
+      {%- endif %}
+      {%- for d in c.downloads %}
+        {%- if d.url and d.url != "" %}
+      <a class="button button--primary" href="{{ d.url }}">{{ d.label | default: "Download" }}</a>
+        {%- else %}
+      <span class="notice notice--missing">[{{ d.label | default: "Download" }}: URL set at release]</span>
+        {%- endif %}
+      {%- if d.note %}<span class="actions__note">{{ d.note }}</span>{% endif %}
+      {%- endfor %}
+      {%- if c.request_key %}
+        {%- if site.contact_email and site.contact_email != "" %}
+      <a class="button" href="mailto:{{ site.contact_email }}?subject={{ c.title | url_encode }}%20key%20request">Request a key</a>
+        {%- else %}
+      <span class="notice notice--missing">[Request-a-key address not set in _config.yml]</span>
+        {%- endif %}
+      {%- endif %}
+      {%- if c.links.repo and c.links.repo != "" and c.links.repo_public_audited %}
+      <a class="button" href="{{ c.links.repo }}">View the code</a>
+      {%- endif %}
+    </div>
+    {%- endif %}
+  </header>
+
+  <div class="wrap">
+    {% include screenshot-gallery.html case=c %}
+  </div>
+
+  <div class="wrap case-grid">
+    <div class="case-body measure">
+      {{ content }}
+      <section class="why" aria-labelledby="why-heading">
+        <h2 id="why-heading">Why this matters for learning</h2>
+        {%- if c.why_learning and c.why_learning != "" %}
+        <p>{{ c.why_learning }}</p>
+        {%- else %}
+        <p class="placeholder">[P3: two to four sentences tying this build to the research strands below.]</p>
+        {%- endif %}
+        {% include aied-link.html ids=c.aied_strands %}
+      </section>
+    </div>
+
+    <aside class="facts" aria-label="Project facts">
+      <dl>
+        <dt>Status</dt><dd>{{ c.status | default: "[status]" }}</dd>
+        <dt>Built for</dt><dd>{{ c.audience | default: "[audience]" }}</dd>
+        <dt>Tools</dt><dd>{% if c.tools and c.tools.size > 0 %}{{ c.tools | join: ", " }}{% else %}[tools]{% endif %}</dd>
+        <dt>Who did what</dt><dd>{{ c.division_of_labor | default: "[division of labor]" }}</dd>
+        <dt>When</dt><dd>{{ c.dates | default: "[dates]" }}</dd>
+        {%- if c.relevant_to and c.relevant_to.size > 0 %}
+        <dt>Relevant to</dt><dd>{{ c.relevant_to | join: ", " }}</dd>
+        {%- endif %}
+      </dl>
+    </aside>
+  </div>
+</article>

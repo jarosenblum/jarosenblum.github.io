@@ -1,0 +1,13 @@
+{%- comment -%}
+  Links a case to the Approach-page strands it draws on. Input: include.ids (array of strand ids).
+{%- endcomment -%}
+{%- if include.ids and include.ids.size > 0 %}
+<ul class="strand-links">
+  {%- for id in include.ids %}
+    {%- assign strand = site.data.strands | where: "id", id | first %}
+    {%- if strand %}
+  <li><a href="{{ '/approach/' | relative_url }}#{{ strand.id }}">{{ strand.label }}</a></li>
+    {%- endif %}
+  {%- endfor %}
+</ul>
+{%- endif %}

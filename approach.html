@@ -1,0 +1,27 @@
+---
+layout: default
+title: Approach
+permalink: /approach/
+---
+<div class="wrap page-top">
+  <div class="measure">
+    <h1>Approach</h1>
+    <p class="placeholder">[P3: background paragraph, about 120 words, first person — confirmed facts only.]</p>
+  </div>
+
+  {%- assign cases = site.case_studies | sort: "order" -%}
+  {%- for s in site.data.strands %}
+  <section class="strand measure" id="{{ s.id }}" aria-labelledby="{{ s.id }}-heading">
+    <h2 id="{{ s.id }}-heading">{{ s.label }}</h2>
+    <p class="placeholder">[P3: what I've researched and published here — CV-sourced, confirmed.]</p>
+    {%- assign linked = "" | split: "" %}
+    {%- for c in cases %}{% if c.aied_strands contains s.id %}{% assign linked = linked | push: c %}{% endif %}{% endfor %}
+    {%- if linked.size > 0 %}
+    <p class="strand__builds-label">Builds in this strand</p>
+    <ul class="strand__builds">
+      {%- for c in linked %}<li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>{% endfor %}
+    </ul>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+</div>
