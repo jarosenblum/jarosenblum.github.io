@@ -9,7 +9,7 @@ Portfolio site, built with Jekyll on GitHub Pages (served from `main`, repo root
 | `_case_studies/` | One file per case study. Copy `_TEMPLATE.md`; front matter carries the facts, the body carries the narrative. |
 | `_data/strands.yml` | Research strands on the Approach page; cases link to them by id. |
 | `_data/early_builds.yml` | Cards on the Work page's early-builds strip, oldest first. |
-| `_layouts/`, `_includes/` | Shared page shell, case template, badges, gallery. Edit here, not per page. |
+| `_layouts/`, `_includes/` | Shared page shell, case template, access line, gallery. Edit here, not per page. |
 | `assets/snapshots/<case>/` | Screenshots only (sanitized). Every app gets 3 to 5. |
 | `exhibits/<case>/` | Curated excerpts copied from source repos after the sanitization audit. |
 | `scripts/check_cases.rb` | Publish gate. Runs in GitHub Actions on every push. |

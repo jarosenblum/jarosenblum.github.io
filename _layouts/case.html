@@ -7,8 +7,6 @@ layout: default
     <p class="case-head__back"><a href="{{ '/work/' | relative_url }}">All work</a></p>
     <h1>{{ c.title }}</h1>
     <p class="case-head__summary">{{ c.summary | default: "[P3: one-line summary — what it is and who it is for]" }}</p>
-    {% include link-badge.html case=c %}
-
     {%- if c.caveat and c.caveat != "" %}
     <aside class="caveat" aria-label="Before you try it">
       <p>{{ c.caveat }}</p>
@@ -20,7 +18,12 @@ layout: default
     {%- endif %}
 
     {%- assign has_actions = false -%}
-    {%- if c.links.live or c.downloads or c.request_key or c.links.repo or c.link_mode == "live" -%}{%- assign has_actions = true -%}{%- endif -%}
+    {%- comment -%} Empty strings are truthy in Liquid, so compare explicitly. {%- endcomment -%}
+    {%- if c.links.live and c.links.live != "" -%}{%- assign has_actions = true -%}{%- endif -%}
+    {%- if c.downloads and c.downloads.size > 0 -%}{%- assign has_actions = true -%}{%- endif -%}
+    {%- if c.request_key -%}{%- assign has_actions = true -%}{%- endif -%}
+    {%- if c.links.repo and c.links.repo != "" and c.links.repo_public_audited -%}{%- assign has_actions = true -%}{%- endif -%}
+    {%- if c.link_mode == "live" -%}{%- assign has_actions = true -%}{%- endif -%}
     {%- if has_actions %}
     <div class="actions">
       {%- if c.links.live and c.links.live != "" %}
@@ -48,6 +51,13 @@ layout: default
       {%- endif %}
     </div>
     {%- endif %}
+    {%- unless has_actions %}
+      {%- if c.link_mode == "walkthrough" %}
+    <p class="access-note">This project isn't public. The screenshots and description show how it works.</p>
+      {%- elsif c.link_mode == "excerpt" %}
+    <p class="access-note">Part of a larger private project. These are selected pieces.</p>
+      {%- endif %}
+    {%- endunless %}
   </header>
 
   <div class="wrap">

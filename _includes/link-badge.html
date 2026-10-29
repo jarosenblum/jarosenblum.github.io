@@ -1,16 +1,14 @@
 {%- comment -%}
-  Badges shown on case rows and case headers. Inputs: include.case (a case-study document).
-  Link mode decides the first badge; download and status add more.
+  Access line for case lists (Home, Work). Plain metadata, not buttons:
+  grey small caps separated by dots; cobalt is kept for things you can click.
+  Status (beta / early alpha) is a highlighter mark. Inputs: include.case.
 {%- endcomment -%}
 {%- assign c = include.case -%}
-<div class="avail">
-<span class="avail__label" id="avail-{{ c.url | slugify }}">Available:</span>
-<ul class="badges" aria-labelledby="avail-{{ c.url | slugify }}">
-  {%- if c.link_mode == "live" %}<li class="badge badge--live">Live</li>{% endif -%}
-  {%- if c.link_mode == "walkthrough" %}<li class="badge badge--walkthrough">Walkthrough</li>{% endif -%}
-  {%- if c.link_mode == "excerpt" %}<li class="badge badge--excerpt">Excerpt</li>{% endif -%}
-  {%- if c.downloads and c.downloads.size > 0 %}<li class="badge badge--download">Download</li>{% endif -%}
-  {%- if c.status == "beta" %}<li class="badge badge--caution">Beta</li>{% endif -%}
-  {%- if c.status == "early alpha" %}<li class="badge badge--caution">Early alpha build</li>{% endif -%}
+<ul class="meta-tags" aria-label="Access">
+  {%- if c.link_mode == "live" %}<li>Live</li>{% endif -%}
+  {%- if c.link_mode == "walkthrough" %}<li>Walkthrough</li>{% endif -%}
+  {%- if c.link_mode == "excerpt" %}<li>Excerpt</li>{% endif -%}
+  {%- if c.downloads and c.downloads.size > 0 %}<li>Download</li>{% endif -%}
+  {%- if c.status == "beta" %}<li><span class="meta-tags__status">Beta</span></li>{% endif -%}
+  {%- if c.status == "early alpha" %}<li><span class="meta-tags__status">Early alpha build</span></li>{% endif -%}
 </ul>
-</div>
