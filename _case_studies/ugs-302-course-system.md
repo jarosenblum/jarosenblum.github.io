@@ -16,8 +16,8 @@ screenshots:
   - { src: "/assets/snapshots/ugs-302-course-system/01-arc-map.png", alt: "A one-page timeline titled One semester, at a glance, marking graded milestones across the fall term and a line showing where AI use is permitted, required, or restricted.", caption: "The semester arc map: graded milestones, and how much AI use each part of the term allows." }
   - { src: "/assets/snapshots/ugs-302-course-system/02-deck.png", alt: "Title slide reading Character Research Brief: You chose a character. Now you need to know them well enough to write them.", caption: "Title slide for one of the course's assignment decks." }
   - { src: "/assets/snapshots/ugs-302-course-system/03-character-card.png", alt: "A character card for Ada Lovelace: why she is underacknowledged, three intellectual commitments, what AI got wrong about her, and evaluation questions tied to AI literacy.", caption: "An instructor example of the character cards students write." }
-tools: ["[needs you: tools — e.g. Claude Code, Python, JavaScript]"]
-division_of_labor: "[needs you: what you designed vs. what AI tools generated]"
+tools: []
+division_of_labor: ""
 dates: "Summer to Fall 2026"
 relevant_to: ["Building with AI", "Turning strategy into learning sequences", "Changing course late", "Reflective practice"]
 requirements: [R1, R2, R4, R8, R9, R3, R10]
@@ -40,11 +40,3 @@ I also built two Claude skills for students. One checks a draft section against 
 Before the term, I used a simulation that walked two student personas through the semester week by week, tracking workload, perceived learning, and enjoyment. Four rounds of that simulation shaped the design. One milestone was redesigned into a scenario-free character introduction, a co-authorship workshop was set for week 8, and a team milestone moved to week 11 with a 14-day window.
 
 The rebuilt visual strategy opens with a table of what the first version got wrong and how each error was corrected.
-
-## What it changed
-
-<span class="needs">[needs you: what you've seen this term — student work, prompt journals, anything you've adjusted.]</span>
-
-## What I'd change next
-
-<span class="needs">[needs you]</span>

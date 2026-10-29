@@ -251,7 +251,10 @@ main:focus { outline: none; }
 .case-head h1 { font-size: clamp(2rem, 5vw, var(--fs-3xl)); max-width: 22ch; }
 .case-head__back { font-size: var(--fs-sm); margin-bottom: 1.5rem; }
 .case-head__summary { font-size: var(--fs-md); max-width: 50ch; }
-.case-head .badges { margin-block: 1rem; }
+.case-head .avail { margin-block: 1rem; }
+.avail { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.avail__label { font-size: var(--fs-sm); color: var(--ink-2); }
+.badge { cursor: default; }
 
 .caveat {
   max-width: var(--measure);

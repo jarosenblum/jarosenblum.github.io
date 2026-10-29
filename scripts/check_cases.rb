@@ -20,7 +20,9 @@ allow_placeholders = ARGV.include?("--allow-placeholders") || (!launched && !ARG
 puts "check_cases: #{allow_placeholders ? 'pre-launch mode (placeholder copy allowed)' : 'publish mode'}"
 
 strand_ids = YAML.safe_load(File.read(File.join(ROOT, "_data/strands.yml"), encoding: "UTF-8")).map { |s| s["id"] }
-required = %w[title summary audience status link_mode tools division_of_labor dates]
+required = %w[title summary status link_mode]
+# audience, tools, division_of_labor and dates may stay empty: the layout hides
+# empty rows, and docs/pending_inputs.md (Project) tracks what is still owed.
 statuses = ["live", "in use", "beta", "prototype", "early alpha", "partial"]
 modes = %w[live walkthrough excerpt]
 

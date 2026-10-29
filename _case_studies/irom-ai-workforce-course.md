@@ -16,8 +16,8 @@ screenshots:
   - { src: "/assets/snapshots/irom-ai-workforce-course/01-unit.png", alt: "Unit structure for a spreadsheet migration agent: five phases (diagnose, classify, checkpoint, build, defend), each with a judgment question, an activity, a deliverable, and a weight.", caption: "Unit structure: each phase pairs a judgment question with something students produce." }
   - { src: "/assets/snapshots/irom-ai-workforce-course/02-architecture.png", alt: "A map of the agent's seven reusable skills, from parsing a workbook to checking that migrated formulas give the same answers, and the gated workflows that sequence them.", caption: "The agent students design: its skills and how they connect." }
   - { src: "/assets/snapshots/irom-ai-workforce-course/03-case.png", alt: "A worked case: moving a shipment workbook from VLOOKUP to XLOOKUP, with the current formula, the migrated formula, and an audit check side by side.", caption: "A sample case, with an audit check on every change." }
-tools: ["[needs you: confirm Claude / Cowork]"]
-division_of_labor: "[needs you: your role on the team]"
+tools: []
+division_of_labor: ""
 dates: "July 2026"
 relevant_to: ["Turning strategy into learning sequences", "Changing course late", "Building with AI"]
 requirements: [R4, R8, R2, R3, R5]
@@ -38,13 +38,3 @@ In one sample unit, students take over an AI agent that migrates spreadsheet loo
 Each research finding carries an evidence tier: verified primary source, vendor self-report, or trade press. That way the course design can tell strong evidence from weak.
 
 Midway through, the course was renamed and restructured, moving from one open project to three fixed technology cases. The design documents keep the superseded versions instead of deleting them, so each decision can be traced.
-
-<span class="needs">[needs you: team roles, and clearance to describe the research findings.]</span>
-
-## What it changed
-
-<span class="needs">[needs you]</span>
-
-## What I'd change next
-
-<span class="needs">[needs you]</span>

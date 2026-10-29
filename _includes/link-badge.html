@@ -3,7 +3,9 @@
   Link mode decides the first badge; download and status add more.
 {%- endcomment -%}
 {%- assign c = include.case -%}
-<ul class="badges" aria-label="Availability">
+<div class="avail">
+<span class="avail__label" id="avail-{{ c.url | slugify }}">Available:</span>
+<ul class="badges" aria-labelledby="avail-{{ c.url | slugify }}">
   {%- if c.link_mode == "live" %}<li class="badge badge--live">Live</li>{% endif -%}
   {%- if c.link_mode == "walkthrough" %}<li class="badge badge--walkthrough">Walkthrough</li>{% endif -%}
   {%- if c.link_mode == "excerpt" %}<li class="badge badge--excerpt">Excerpt</li>{% endif -%}
@@ -11,3 +13,4 @@
   {%- if c.status == "beta" %}<li class="badge badge--caution">Beta</li>{% endif -%}
   {%- if c.status == "early alpha" %}<li class="badge badge--caution">Early alpha build</li>{% endif -%}
 </ul>
+</div>

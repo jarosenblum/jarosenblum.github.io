@@ -19,7 +19,7 @@ screenshots:
   - { src: "/assets/snapshots/relaxing-patterns/03-screen.png", alt: "Blue and green light patterns on a dark background, in a cooler palette.", caption: "One of several palettes for different moods." }
   - { src: "/assets/snapshots/relaxing-patterns/04-loop.png", alt: "Diagram: touch sets one of seven interaction states that drive ambient sound and animation; a session clock paces reflective prompts and a slow drift in the sound.", caption: "How touch, sound, motion and time respond to each other." }
 tools: ["Codex", "SwiftUI", "AVAudioEngine"]
-division_of_labor: "[needs you: what you designed vs. what Codex generated; which parts used Claude, e.g. the support site]"
+division_of_labor: ""
 dates: "2026"
 relevant_to: ["Multimodal design", "Building with AI", "Changing course late"]
 requirements: [R2, R7, R8]
@@ -50,8 +50,4 @@ I shipped it in stages, with the base app first and additional pattern packs pla
 
 ## What it changed
 
-As of October 28, 2026, the App Store lists 5 ratings averaging 5.0. <span class="needs">[needs you: anything else — downloads, what you learned from release.]</span>
-
-## What I'd change next
-
-<span class="needs">[needs you: e.g. the in-app pattern packs, or the breath-aware version.]</span>
+As of October 28, 2026, the App Store lists 5 ratings averaging 5.0.

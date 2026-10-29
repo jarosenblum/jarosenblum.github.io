@@ -61,8 +61,6 @@ layout: default
         <h2 id="why-heading">Why this matters for learning</h2>
         {%- if c.why_learning and c.why_learning != "" %}
         <p>{{ c.why_learning }}</p>
-        {%- else %}
-        <p class="placeholder">[P3: two to four sentences tying this build to the research strands below.]</p>
         {%- endif %}
         {% include aied-link.html ids=c.aied_strands %}
       </section>
@@ -70,11 +68,11 @@ layout: default
 
     <aside class="facts" aria-label="Project facts">
       <dl>
-        <dt>Status</dt><dd>{{ c.status | default: "[status]" }}</dd>
-        <dt>Built for</dt><dd>{{ c.audience | default: "[audience]" }}</dd>
-        <dt>Tools</dt><dd>{% if c.tools and c.tools.size > 0 %}{{ c.tools | join: ", " }}{% else %}[tools]{% endif %}</dd>
-        <dt>Who did what</dt><dd>{{ c.division_of_labor | default: "[division of labor]" }}</dd>
-        <dt>When</dt><dd>{{ c.dates | default: "[dates]" }}</dd>
+        {%- if c.status and c.status != "" %}<dt>Status</dt><dd>{{ c.status }}</dd>{% endif %}
+        {%- if c.audience and c.audience != "" %}<dt>Built for</dt><dd>{{ c.audience }}</dd>{% endif %}
+        {%- if c.tools and c.tools.size > 0 %}<dt>Tools</dt><dd>{{ c.tools | join: ", " }}</dd>{% endif %}
+        {%- if c.division_of_labor and c.division_of_labor != "" %}<dt>Who did what</dt><dd>{{ c.division_of_labor }}</dd>{% endif %}
+        {%- if c.dates and c.dates != "" %}<dt>When</dt><dd>{{ c.dates }}</dd>{% endif %}
         {%- if c.relevant_to and c.relevant_to.size > 0 %}
         <dt>Relevant to</dt><dd>{{ c.relevant_to | join: ", " }}</dd>
         {%- endif %}

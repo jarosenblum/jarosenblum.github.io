@@ -26,7 +26,3 @@ I'm an Assistant Professor of Instruction at the University of Texas at Austin, 
 - Ph.D., Curriculum and Instruction (Learning Technologies), The University of Texas at Austin, 2014
 - M.S., Computer Education and Cognitive Systems, University of North Texas, 1994
 - B.S., Microbiology, Texas A&M University, 1992
-
-## Contact
-
-<span class="needs">[needs you: contact address to publish here — jarosenblum@utexas.edu, as on the key-request buttons?]</span>

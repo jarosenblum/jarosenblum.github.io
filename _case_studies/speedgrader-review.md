@@ -18,7 +18,7 @@ screenshots:
   - { src: "/assets/snapshots/speedgrader-review/01-app.png", alt: "The SpeedGrader Rubric Review window before files are loaded: buttons to open submissions, rubric, assignment description and roster; a banner saying it never submits a grade; and a choice to show anonymous tags or real names.", caption: "The main window. The banner and the scrubbed-text view are part of the design, not an afterthought." }
   - { src: "/assets/snapshots/speedgrader-review/03-pipeline.png", alt: "Diagram: the instructor loads a rubric, assignment, submissions and roster; the app anonymizes names, drafts per-criterion recommendations with quotes, checks each quote, and flags problems; the instructor reads the draft and enters the grade.", caption: "What the app does, and where the instructor decides." }
 tools: ["Claude Code", "Python"]
-division_of_labor: "[needs you: what you decided and wrote vs. what Claude Code generated]"
+division_of_labor: ""
 dates: "July to September 2026"
 relevant_to: ["Building with AI", "Building to think", "Reflective practice"]
 requirements: [R2, R7, R9, R8, R10]
@@ -43,10 +43,6 @@ I built it with Claude Code over six weeks: first commit July 31, 2026, latest S
 Real course data never enters the code repository. Each person who runs the app uses their own API key, which the app stores outside the project, so no shared key ships inside the download.
 
 I also audited it on real work. A line-by-line check of two of its evaluations found that some "quote not found" flags were false alarms, that a name-redaction step had silently removed an author's surname from a works-cited list, and that the app was using only three of the rubric's five performance tiers. Each finding is logged in the backlog with a proposed fix.
-
-## What it changed
-
-<span class="needs">[needs you: what changed for you or for colleagues who use it — time per batch, consistency, who else grades with it.]</span>
 
 ## What I'd change next
 
