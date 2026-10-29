@@ -31,11 +31,17 @@ permalink: /work/
           {%- endif %}
         </div>
         <p class="early-card__date">{{ b.date | default: "[date]" }}</p>
-        <h3 class="early-card__name">
-          {%- if b.link and b.link != "" %}<a href="{{ b.link }}">{{ b.name }}</a>{% else %}{{ b.name }}{% endif %}
-        </h3>
+        <h3 class="early-card__name">{{ b.name }}</h3>
         {%- if b.label %}<p class="badge badge--caution">{{ b.label }}</p>{% endif %}
         <p class="early-card__note">{{ b.note }}</p>
+        {%- if b.links and b.links.size > 0 %}
+        <ul class="early-card__links">
+          {%- for l in b.links %}
+          {%- assign ext = l.url | slice: 0, 4 %}
+          <li><a href="{% if ext == 'http' %}{{ l.url }}{% else %}{{ l.url | relative_url }}{% endif %}">{{ l.label }}</a></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
       </li>
       {%- endfor %}
     </ol>

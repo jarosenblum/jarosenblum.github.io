@@ -11,7 +11,7 @@ links:
   repo: ""
   repo_public_audited: false
 downloads:
-  - { label: "Download for Mac", url: "", note: "Apple Silicon, macOS 11 or later, v0.1.0" }
+  - { label: "Download for Mac", url: "/downloads/SpeedGrader-Rubric-Review-macOS-v0.1.0.zip", note: "Apple Silicon, macOS 11 or later, v0.1.0, 18 MB. Needs a key." }
 request_key: true
 screenshots:
   - { src: "", alt: "", caption: "" }
@@ -26,7 +26,6 @@ aied_strands: []
 why_learning: ""
 order: 1
 placeholder: true
-# Download and key request are decided (decisions.md); URL filled at release.
 ---
 
 ## What I built

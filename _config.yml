@@ -4,10 +4,8 @@ description: AI and education portfolio
 url: "https://jarosenblum.github.io"
 baseurl: ""
 lang: en
-# Address used by "Request a key" buttons. Left empty on purpose until the
-# owner confirms which address to publish; the button renders as a notice
-# instead of a link while this is empty.
-contact_email: ""
+# Address used by "Request a key" buttons (owner-confirmed 2026-10-28).
+contact_email: "jarosenblum@utexas.edu"
 # Pre-launch switch. While false, every page carries <meta name="robots"
 # content="noindex"> so search engines skip test builds. Set true at P5.
 launched: false

@@ -8,3 +8,6 @@ _site/
 *.zip
 config.json
 .env
+
+# Published downloads are committed on purpose (owner request, 2026-10-28).
+!downloads/*.zip
