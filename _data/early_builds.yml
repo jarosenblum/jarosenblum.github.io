@@ -1,11 +1,6 @@
-# "Early builds" strip on the Work page, oldest first. Dates come from git
+# "Early AI builds, 2025–2026" strip on the Work page, oldest first. Dates come from git
 # history or the CV, never estimates. Every url here is public and was
 # audited in P1.
-- name: Learning games and simulations
-  date: "2010–2013"
-  note: "Before generative AI: design and game audio for Alien Rescue (2012 AECT Interactive Learning Award), a Syria conflict role-play simulation, an augmented-reality neighborhood tour on the ARIS platform, and Plato's Cave in Second Life."
-  links: []           # URLs pending from owner
-  screenshot: ""
 - name: Teaching demos
   date: "March 2025"
   note: "Two lesson designs: a public health case study that uses AI, and a generative AI literacy session for classroom teachers."

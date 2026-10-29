@@ -1,0 +1,51 @@
+# "Design work, 2008–2018" strip on the Work page, oldest first.
+# Source: owner's work-samples deck (2008–2018) + CV. Thumbnails are cropped
+# from the deck to exclude people, student work, and identifying details.
+- name: "Plato's Allegory of the Cave"
+  date: "2008–2010"
+  note: "A Second Life simulation for a philosophy course. I built the levels and coded the interactions, treating the allegory as a world students walk through, with active learning and Socratic dialogue. First iteration in four months; a two-year project cycle."
+  screenshot: "/assets/snapshots/design-2008-2018/plato.jpg"
+  alt: "Two Second Life scenes: a lit path through a cave landscape, and avatars seated inside the cave."
+  links: []
+- name: "Salamander Rescue"
+  date: "[needs you: years]"
+  note: "Game audio for a problem-based science game for middle school students, from UT Austin's learning technologies research group: sound design and sound-engine coding in Unity, on a game also used as a research platform. I also designed game audio for Alien Rescue (versions 4.0 to 5.0), which won the 2012 AECT Interactive Learning Award."
+  screenshot: "/assets/snapshots/design-2008-2018/salamander.jpg"
+  alt: "A 3D game scene of a path leading to a small building among trees, with an alert icon in the corner."
+  links: []
+- name: "Superhero gaming with global social problems"
+  date: "2011–2013"
+  note: "A course designed around game mechanics: students took on superhero roles to tackle global social problems through social media and local action, with badges and authentic assessment, on a Drupal and WordPress site. It earned the 2012 Hudspeth Award for Innovative Instruction."
+  screenshot: "/assets/snapshots/design-2008-2018/superhero.jpg"
+  alt: "The course website's Getting Started page under a Global Social Problems banner."
+  links: []
+- name: "The Syria Simulation"
+  date: "2012–2016"
+  note: "A three-hour live role-play of the Syrian conflict, with cooperative and competitive play and a deliberately hard win condition. Its mechanics come from the course's threshold concepts. It reached more than 700 students in 2015–2016."
+  screenshot: "/assets/snapshots/design-2008-2018/syria.jpg"
+  alt: "Printed role cards fanned around a game board map of Syria and its neighbors."
+  links: []
+- name: "Exploring East Cesar Chavez"
+  date: "2013"
+  note: "A place-based mobile game on the ARIS platform. Students walk an Austin neighborhood, record audio and photos, and answer a journal prompt at each stop."
+  screenshot: "/assets/snapshots/design-2008-2018/chavez.jpg"
+  alt: "Four phone screens from the game: title card, map, notebook of recordings and photos, and a quest list with journal prompts."
+  links: []
+- name: "Game Design Studio 1 and 2"
+  date: "2015–2016"
+  note: "Two St. Edward's courses that took students from paper prototypes to playable levels in Unreal Engine 4, on agile production milestones."
+  screenshot: "/assets/snapshots/design-2008-2018/gamedesign.jpg"
+  alt: "A course calendar of production milestones beside an Unreal Engine level editor."
+  links: []
+- name: "Hello World Tech Studio"
+  date: "2016"
+  note: "A coding camp for K–6 students: procedural thinking and HTML through interactive stories in Twine, starting from pre-built levels. An early prototype, tested with an initial team."
+  screenshot: "/assets/snapshots/design-2008-2018/helloworld.jpg"
+  alt: "A lesson slide titled Coding in Twine showing link syntax, beside a diagram of connected story passages."
+  links: []
+- name: "NYIT orientation game"
+  date: "Fall 2017"
+  note: "i-Interact and i-Explore: a mobile orientation game on ARIS for new students. I was the technical lead for orientation and managed the project."
+  screenshot: "/assets/snapshots/design-2008-2018/nyit.jpg"
+  alt: "A campus-area map with game location markers next to two achievement badges."
+  links: []

@@ -17,33 +17,15 @@ permalink: /work/
     </ul>
   </section>
 
-  <section class="early" aria-labelledby="early-heading">
-    <h2 id="early-heading">Early builds</h2>
-    <p class="measure">Earlier things I built, oldest first.</p>
-    <ol class="early-strip" tabindex="0" aria-label="Early builds, oldest first">
-      {%- for b in site.data.early_builds %}
-      <li class="early-card">
-        <div class="early-card__shot">
-          {%- if b.screenshot and b.screenshot != "" %}
-          <img src="{{ b.screenshot | relative_url }}" alt="{{ b.alt }}" loading="lazy" width="480" height="300">
-          {%- else %}
-          <span class="thumb-missing">Screenshot pending</span>
-          {%- endif %}
-        </div>
-        <p class="early-card__date">{{ b.date | default: "[date]" }}</p>
-        <h3 class="early-card__name">{{ b.name }}</h3>
-        {%- if b.label %}<p class="badge badge--caution">{{ b.label }}</p>{% endif %}
-        <p class="early-card__note">{{ b.note }}</p>
-        {%- if b.links and b.links.size > 0 %}
-        <ul class="early-card__links">
-          {%- for l in b.links %}
-          {%- assign ext = l.url | slice: 0, 4 %}
-          <li><a href="{% if ext == 'http' %}{{ l.url }}{% else %}{{ l.url | relative_url }}{% endif %}">{{ l.label }}</a></li>
-          {%- endfor %}
-        </ul>
-        {%- endif %}
-      </li>
-      {%- endfor %}
-    </ol>
+  <section class="early" aria-labelledby="early-ai-heading">
+    <h2 id="early-ai-heading">Early AI builds, 2025–2026</h2>
+    <p class="measure">Smaller experiments that led to the case studies above, oldest first.</p>
+    {% include build-strip.html items=site.data.early_builds label="Early AI builds, oldest first" %}
+  </section>
+
+  <section class="early" aria-labelledby="before-ai-heading">
+    <h2 id="before-ai-heading">Design work, 2008–2018</h2>
+    <p class="measure">Before generative AI, most of my design work was games, simulations, and place-based learning. These are eight of those projects, oldest first.</p>
+    {% include build-strip.html items=site.data.design_before_ai label="Design work 2008 to 2018, oldest first" %}
   </section>
 </div>
