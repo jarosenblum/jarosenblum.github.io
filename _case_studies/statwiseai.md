@@ -13,9 +13,10 @@ links:
 downloads: []
 request_key: false
 screenshots:
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
+  - { src: "/assets/snapshots/statwiseai/01-home.png", alt: "The StatWiseAI tutorial home page: a learning path of nine modules on the left and an overview of how the path works.", caption: "The learning path: nine short modules." }
+  - { src: "/assets/snapshots/statwiseai/02-module-1.png", alt: "Module 1, Start Here: Responsible Use Rules, with a placeholder for a short video and an interactive check on what can be uploaded.", caption: "Module 1 starts with what you can and can't put into the tool." }
+  - { src: "/assets/snapshots/statwiseai/03-module-3.png", alt: "A prompt builder form with fields for the research question, data source, outcome and covariates, and the assembled prompt below.", caption: "A prompt builder for data-analysis questions." }
+  - { src: "/assets/snapshots/statwiseai/04-module-9.png", alt: "Module 9, Templates and Checklists: reusable prompt templates and a privacy checklist.", caption: "Templates and a privacy checklist to take away." }
 tools: ["[needs you: confirm Claude Code]", "HTML, CSS, JavaScript"]
 division_of_labor: "[needs you: your role vs. the center's]"
 dates: "July 2026"

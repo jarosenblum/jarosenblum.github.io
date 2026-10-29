@@ -14,9 +14,10 @@ links:
 downloads: []
 request_key: false
 screenshots:
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
+  - { src: "/assets/snapshots/relaxing-patterns/01-screen.png", alt: "Soft, blurred circles of colored light on a dark background, with the prompt Let your attention follow the circles.", caption: "An opening prompt. Touch makes and moves the light." }
+  - { src: "/assets/snapshots/relaxing-patterns/02-screen.png", alt: "Warm orange and red light patterns on a dark background, with the prompt Let the sound deepen.", caption: "Later in a session, the prompts point to the sound." }
+  - { src: "/assets/snapshots/relaxing-patterns/03-screen.png", alt: "Blue and green light patterns on a dark background, in a cooler palette.", caption: "One of several palettes for different moods." }
+  - { src: "/assets/snapshots/relaxing-patterns/04-loop.png", alt: "Diagram: touch sets one of seven interaction states that drive ambient sound and animation; a session clock paces reflective prompts and a slow drift in the sound.", caption: "How touch, sound, motion and time respond to each other." }
 tools: ["Codex", "SwiftUI", "AVAudioEngine"]
 division_of_labor: "[needs you: what you designed vs. what Codex generated; which parts used Claude, e.g. the support site]"
 dates: "2026"

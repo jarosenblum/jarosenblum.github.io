@@ -13,9 +13,9 @@ links:
 downloads: []
 request_key: false
 screenshots:
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
+  - { src: "/assets/snapshots/irom-ai-workforce-course/01-unit.png", alt: "Unit structure for a spreadsheet migration agent: five phases (diagnose, classify, checkpoint, build, defend), each with a judgment question, an activity, a deliverable, and a weight.", caption: "Unit structure: each phase pairs a judgment question with something students produce." }
+  - { src: "/assets/snapshots/irom-ai-workforce-course/02-architecture.png", alt: "A map of the agent's seven reusable skills, from parsing a workbook to checking that migrated formulas give the same answers, and the gated workflows that sequence them.", caption: "The agent students design: its skills and how they connect." }
+  - { src: "/assets/snapshots/irom-ai-workforce-course/03-case.png", alt: "A worked case: moving a shipment workbook from VLOOKUP to XLOOKUP, with the current formula, the migrated formula, and an audit check side by side.", caption: "A sample case, with an audit check on every change." }
 tools: ["[needs you: confirm Claude / Cowork]"]
 division_of_labor: "[needs you: your role on the team]"
 dates: "July 2026"

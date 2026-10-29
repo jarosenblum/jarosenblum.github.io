@@ -13,9 +13,9 @@ links:
 downloads: []
 request_key: false
 screenshots:
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
+  - { src: "/assets/snapshots/ai-literacy-evaluator/01-home.png", alt: "The AI Literacy Evaluator page: a Check Your Understanding box for a statement, an Evaluate button, and a follow-up question panel on the left.", caption: "The start page. You write a statement about AI in your own words." }
+  - { src: "/assets/snapshots/ai-literacy-evaluator/02-statement.png", alt: "A sample statement typed into the box: Generative AI predicts likely next words from patterns in its training data, so it can sound confident even when it is wrong.", caption: "A statement ready to evaluate. Screenshots were taken without running an evaluation." }
+  - { src: "/assets/snapshots/ai-literacy-evaluator/03-phone.png", alt: "The evaluator on a phone-sized screen, with the same statement box and Evaluate button stacked in one column.", caption: "It also works on a phone." }
 tools: ["Streamlit", "AWS", "[needs you: model and AI tools used to build it]"]
 division_of_labor: "[needs you]"
 dates: "[needs you]"

@@ -14,9 +14,9 @@ downloads:
   - { label: "Download for Mac", url: "/downloads/SpeedGrader-Rubric-Review-macOS-v0.1.0.zip", note: "Apple Silicon, macOS 11 or later, v0.1.0, 18 MB. Needs a key." }
 request_key: true
 screenshots:
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
+  - { src: "/assets/snapshots/speedgrader-review/02-toy-evaluation.png", alt: "The app with a fictional toy rubric and two sample submissions loaded, showing the rubric levels for a sample essay.", caption: "Running on fictional sample data: a toy rubric and two invented submissions." }
+  - { src: "/assets/snapshots/speedgrader-review/01-app.png", alt: "The SpeedGrader Rubric Review window before files are loaded: buttons to open submissions, rubric, assignment description and roster; a banner saying it never submits a grade; and a choice to show anonymous tags or real names.", caption: "The main window. The banner and the scrubbed-text view are part of the design, not an afterthought." }
+  - { src: "/assets/snapshots/speedgrader-review/03-pipeline.png", alt: "Diagram: the instructor loads a rubric, assignment, submissions and roster; the app anonymizes names, drafts per-criterion recommendations with quotes, checks each quote, and flags problems; the instructor reads the draft and enters the grade.", caption: "What the app does, and where the instructor decides." }
 tools: ["Claude Code", "Python"]
 division_of_labor: "[needs you: what you decided and wrote vs. what Claude Code generated]"
 dates: "July to September 2026"
@@ -33,6 +33,8 @@ placeholder: false
 A desktop app for grading written work against a rubric. It loads the rubric directly from Canvas's rubric export, along with the assignment description, then drafts a recommendation for each criterion and quotes the passages in the submission that support it. The instructor reads the draft and enters the grade in SpeedGrader themselves.
 
 There are three things it will never do: submit a grade, publish anything to a course, or claim that a submission was written by AI. Those limits are written into the app's rules, not left to habit. Every quote it cites is checked against the submission text, and any quote it can't find is flagged for the instructor instead of being shown as evidence.
+
+Student privacy is built in the same way. The app won't evaluate anything until a class roster is loaded, and before any text leaves the Mac it replaces every roster name with an anonymous tag. The instructor can switch the view to real names to match rows in SpeedGrader, but only the scrubbed text is ever sent.
 
 ## How I built it
 

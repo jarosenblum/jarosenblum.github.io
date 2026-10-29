@@ -13,9 +13,9 @@ links:
 downloads: []
 request_key: false
 screenshots:
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
-  - { src: "", alt: "", caption: "" }
+  - { src: "/assets/snapshots/ugs-302-course-system/01-arc-map.png", alt: "A one-page timeline titled One semester, at a glance, marking graded milestones across the fall term and a line showing where AI use is permitted, required, or restricted.", caption: "The semester arc map: graded milestones, and how much AI use each part of the term allows." }
+  - { src: "/assets/snapshots/ugs-302-course-system/02-deck.png", alt: "Title slide reading Character Research Brief: You chose a character. Now you need to know them well enough to write them.", caption: "Title slide for one of the course's assignment decks." }
+  - { src: "/assets/snapshots/ugs-302-course-system/03-character-card.png", alt: "A character card for Ada Lovelace: why she is underacknowledged, three intellectual commitments, what AI got wrong about her, and evaluation questions tied to AI literacy.", caption: "An instructor example of the character cards students write." }
 tools: ["[needs you: tools — e.g. Claude Code, Python, JavaScript]"]
 division_of_labor: "[needs you: what you designed vs. what AI tools generated]"
 dates: "Summer to Fall 2026"
