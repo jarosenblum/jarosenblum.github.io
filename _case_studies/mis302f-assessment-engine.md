@@ -18,7 +18,7 @@ screenshots:
   - { src: "/assets/snapshots/mis302f-assessment-engine/03-audit-gate.png", alt: "Flowchart: five judgment audits and three rule audits feed one check; blocking findings go to instructor review before the set is locked.", caption: "The audit gate: blocking findings stop the run until I repair or override them." }
 tools: ["Claude Cowork", "Claude Code", "Python"]
 division_of_labor: "Python handles counting, validation, locking, and packaging; Claude Cowork handles classification, drafting, and the judgment audits; I review at four checkpoints."
-dates: "June to September 2026"
+dates: "Spring to Fall 2026"
 relevant_to: ["Building with AI"]
 requirements: [R2, R4, R5, R8, R9, R10]
 aied_strands: [assessment]
@@ -31,7 +31,7 @@ placeholder: false
 
 A pipeline for building multiple-choice exams from what was actually taught. It runs in stages: it takes in lecture transcripts and course materials, maps the topics, builds a blueprint with a fixed difficulty mix, drafts questions, audits them, locks the approved set, and packages it for import into Canvas. Eight audits check the finished set, and any blocking finding stops the run until I repair or override it.
 
-I've used it for both Summer 2026 exams and the first Fall 2026 exam. The diagrams on this page show how it's put together; no real exam content appears here.
+It generated 640 exam questions in Spring 2026, run on a different machine, and 200 so far in Fall 2026. My Summer 2026 runs were testing. The diagrams on this page show how it's put together; no real exam content appears here.
 
 ## How I built it
 
