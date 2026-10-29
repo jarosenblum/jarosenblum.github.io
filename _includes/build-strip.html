@@ -4,7 +4,7 @@
 {%- endcomment -%}
 <ol class="early-strip" tabindex="0" aria-label="{{ include.label }}">
   {%- for b in include.items %}
-  <li class="early-card">
+  <li class="early-card" id="{{ b.name | slugify }}">
     <div class="early-card__shot">
       {%- if b.screenshot and b.screenshot != "" %}
       <img src="{{ b.screenshot | relative_url }}" alt="{{ b.alt }}" loading="lazy" width="480" height="300">

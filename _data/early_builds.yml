@@ -2,6 +2,7 @@
 # history or the CV, never estimates. Every url here is public and was
 # audited in P1.
 - name: Teaching demos
+  strands: [ai-literacy]
   date: "March 2025"
   note: "Two lesson designs: a public health case study that uses AI, and a generative AI literacy session for classroom teachers."
   links:
@@ -9,11 +10,13 @@
     - { label: "GenAI literacy teaching demo", url: "/exhibits/teaching-demos/SJSUTeachingDemoGenAILiteracyRosenblum.html" }
   screenshot: ""
 - name: OdinAI experiments
+  strands: [ai-literacy]
   date: "January–November 2025"
   note: "Class chat spaces and a side-by-side generative AI comparison, built on the Odin AI platform."
   links: []           # no repo link while student-labeled pages remain (registry C2)
   screenshot: ""      # GenAICompare page only
 - name: Job Optimizer
+  strands: [workforce]
   label: Early alpha build
   date: "March 2026"
   note: "Tailors a resume and cover letter to a job description. Runs from the command line or a Streamlit page."
@@ -21,6 +24,7 @@
     - { label: "View the code", url: "https://github.com/jarosenblum/job-optimizer" }
   screenshot: ""
 - name: SQL Coach
+  strands: [assessment]
   date: "March 2026"
   note: "A SQL tutor for MIS 302F that removes its hints question by question, following a written scaffolding plan, and reports concept scores for each session."
   links:
