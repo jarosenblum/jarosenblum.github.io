@@ -9,7 +9,7 @@ url: "https://jarosenblum.github.io"
 baseurl: ""
 lang: en
 # Address used by "Request a key" buttons (owner-confirmed 2026-10-28).
-contact_email: "jarosenblum@utexas.edu"
+contact_email: "jarosenblum@gmail.com"
 # Pre-launch switch. While false, every page carries <meta name="robots"
 # content="noindex"> so search engines skip test builds. Set true at P5.
 launched: false
