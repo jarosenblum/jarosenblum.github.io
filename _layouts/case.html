@@ -38,7 +38,7 @@ layout: default
       {%- endfor %}
       {%- if c.request_key %}
         {%- if site.contact_email and site.contact_email != "" %}
-      <a class="button" href="mailto:{{ site.contact_email }}?subject={{ c.title | url_encode }}%20key%20request">Request a key</a>
+      <a class="button" href="mailto:{{ site.contact_email }}?subject={{ c.title | append: ' key request' | escape | replace: ' ', '%20' }}">Request a key</a>
         {%- else %}
       <span class="notice notice--missing">[Request-a-key address not set in _config.yml]</span>
         {%- endif %}
