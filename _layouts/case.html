@@ -24,7 +24,7 @@ layout: default
     {%- if has_actions %}
     <div class="actions">
       {%- if c.links.live and c.links.live != "" %}
-      <a class="button button--primary" href="{{ c.links.live }}">Try it live</a>
+      <a class="button button--primary" href="{{ c.links.live }}">{{ c.links.live_label | default: "Try it live" }}</a>
       {%- elsif c.link_mode == "live" %}
       <span class="notice notice--missing">[Live link not set]</span>
       {%- endif %}

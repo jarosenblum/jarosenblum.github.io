@@ -15,11 +15,11 @@ ROOT = File.expand_path("..", __dir__)
 # Strict (publish) mode once _config.yml has `launched: true`, or with --strict.
 # Before launch, P3-copy checks are skipped so scaffold pushes stay green;
 # structural rules (link modes, alt text, audited repo links, strand ids) always run.
-launched = (YAML.safe_load(File.read(File.join(ROOT, "_config.yml"))) || {})["launched"] == true
+launched = (YAML.safe_load(File.read(File.join(ROOT, "_config.yml"), encoding: "UTF-8")) || {})["launched"] == true
 allow_placeholders = ARGV.include?("--allow-placeholders") || (!launched && !ARGV.include?("--strict"))
 puts "check_cases: #{allow_placeholders ? 'pre-launch mode (placeholder copy allowed)' : 'publish mode'}"
 
-strand_ids = YAML.safe_load(File.read(File.join(ROOT, "_data/strands.yml"))).map { |s| s["id"] }
+strand_ids = YAML.safe_load(File.read(File.join(ROOT, "_data/strands.yml"), encoding: "UTF-8")).map { |s| s["id"] }
 required = %w[title summary audience status link_mode tools division_of_labor dates]
 statuses = ["live", "in use", "beta", "prototype", "early alpha", "partial"]
 modes = %w[live walkthrough excerpt]
@@ -28,7 +28,7 @@ problems = []
 Dir[File.join(ROOT, "_case_studies/*.md")].sort.each do |path|
   name = File.basename(path)
   next if name.start_with?("_")
-  text = File.read(path)
+  text = File.read(path, encoding: "UTF-8")
   fm = text[/\A---\s*\n(.*?)\n---\s*\n/m, 1]
   if fm.nil?
     problems << "#{name}: no front matter"
@@ -45,6 +45,7 @@ Dir[File.join(ROOT, "_case_studies/*.md")].sort.each do |path|
     end
     err.("placeholder: true is still set") if d["placeholder"]
     err.("unfinished [P3] copy in body") if body.include?("[P3")
+    err.("[needs you] marker still in case") if text.include?("[needs you")
   end
 
   err.("status '#{d['status']}' not one of #{statuses.join(', ')}") if d["status"].to_s != "" && !statuses.include?(d["status"])
@@ -70,6 +71,14 @@ Dir[File.join(ROOT, "_case_studies/*.md")].sort.each do |path|
   err.("link_mode is live but links.live is empty") if d["link_mode"] == "live" && links["live"].to_s == "" && !allow_placeholders
 
   Array(d["aied_strands"]).each { |id| err.("unknown strand id '#{id}'") unless strand_ids.include?(id) }
+end
+
+unless allow_placeholders
+  site_files = Dir[File.join(ROOT, "{index.html,work.html,approach.html,about.md,_includes/*.html,_data/*.yml}")]
+  site_files.each do |f|
+    s = File.read(f, encoding: "UTF-8")
+    problems << "#{f.sub(ROOT + '/', '')}: unfinished copy marker" if s.include?("[needs you") || s.include?("[P3")
+  end
 end
 
 if problems.empty?

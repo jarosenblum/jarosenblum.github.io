@@ -10,7 +10,7 @@
   </a>
   <div class="case-row__body">
     <h3 class="case-row__title"><a href="{{ c.url | relative_url }}">{{ c.title }}</a></h3>
-    <p class="case-row__summary">{{ c.summary | default: "[P3: one-line summary]" }}</p>
+    <p class="case-row__summary">{{ c.summary }}</p>
     {% include link-badge.html case=c %}
   </div>
 </li>

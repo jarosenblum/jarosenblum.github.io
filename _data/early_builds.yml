@@ -1,39 +1,33 @@
-# "Early builds" strip on the Work page. Ordered oldest first by verified date
-# (git history or CV) — dates are filled in P3, never estimated.
-# links: list of {label, url}; every url here is public and was audited in P1.
-- name: Pre-AI design projects
-  note: "[P3: Alien Rescue, Syria Simulation, East Cesar Chavez (ARIS), Plato's Cave — URLs pending]"
-  date: ""
-  links: []
-  screenshot: ""
-- name: OdinAI experiments
-  note: "[P3]"
-  date: ""
-  links: []           # no repo link while student-labeled pages remain (registry C2)
-  screenshot: ""      # GenAICompare page only
-- name: SQL Coach
-  note: "[P3]"
-  date: ""
-  links:
-    - { label: "View the code", url: "https://github.com/jarosenblum/sql-coach-app" }
-  screenshot: ""
-- name: Job Optimizer
-  label: Early alpha build
-  note: "[P3]"
-  date: ""
-  links:
-    - { label: "View the code", url: "https://github.com/jarosenblum/job-optimizer" }
+# "Early builds" strip on the Work page, oldest first. Dates come from git
+# history or the CV, never estimates. Every url here is public and was
+# audited in P1.
+- name: Learning games and simulations
+  date: "2010–2013"
+  note: "Before generative AI: design and game audio for Alien Rescue (2012 AECT Interactive Learning Award), a Syria conflict role-play simulation, an augmented-reality neighborhood tour on the ARIS platform, and Plato's Cave in Second Life."
+  links: []           # URLs pending from owner
   screenshot: ""
 - name: Teaching demos
-  note: "[P3]"
-  date: ""
+  date: "March 2025"
+  note: "Two lesson designs: a public health case study that uses AI, and a generative AI literacy session for classroom teachers."
   links:
     - { label: "Public health case study", url: "/exhibits/teaching-demos/CaseStudyTeachingPublicHealthwithAI.html" }
     - { label: "GenAI literacy teaching demo", url: "/exhibits/teaching-demos/SJSUTeachingDemoGenAILiteracyRosenblum.html" }
   screenshot: ""
-- name: Relaxing Patterns
-  note: "[P3]"
-  date: ""
+- name: OdinAI experiments
+  date: "January–November 2025"
+  note: "Class chat spaces and a side-by-side generative AI comparison, built on the Odin AI platform."
+  links: []           # no repo link while student-labeled pages remain (registry C2)
+  screenshot: ""      # GenAICompare page only
+- name: Job Optimizer
+  label: Early alpha build
+  date: "March 2026"
+  note: "Tailors a resume and cover letter to a job description. Runs from the command line or a Streamlit page."
   links:
-    - { label: "App Store", url: "https://apps.apple.com/us/app/relaxing-patterns/id6763662279" }
+    - { label: "View the code", url: "https://github.com/jarosenblum/job-optimizer" }
+  screenshot: ""
+- name: SQL Coach
+  date: "March 2026"
+  note: "A SQL tutor for MIS 302F that removes its hints question by question, following a written scaffolding plan, and reports concept scores for each session."
+  links:
+    - { label: "View the code", url: "https://github.com/jarosenblum/sql-coach-app" }
   screenshot: ""

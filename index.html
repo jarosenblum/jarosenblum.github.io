@@ -5,7 +5,7 @@ title: Home
 {%- assign cases = site.case_studies | sort: "order" -%}
 <section class="hero wrap" aria-labelledby="hero-heading">
   <h1 id="hero-heading" class="hero__name">{{ site.title }}</h1>
-  <p class="hero__lede placeholder">[P3: one sentence — what I build, for whom, and why it matters for learning.]</p>
+  <p class="hero__lede">I design learning experiences and build the AI tools behind them, for instructors, researchers, and students.</p>
 
   <ul class="contact-sheet" tabindex="0" aria-label="Screens from the work">
     {%- for c in cases limit: 5 %}
@@ -27,7 +27,8 @@ title: Home
 <section class="wrap home-narrative" aria-labelledby="narrative-heading">
   <div class="measure">
     <h2 id="narrative-heading">What this portfolio shows</h2>
-    <p class="placeholder">[P3: about 150 words. Lead with what was built, for whom, and what it changed.]</p>
+    <p>Everything here is something I built, most of it in the past year with AI tools as building partners: a grading assistant that drafts rubric feedback and shows its evidence, an exam pipeline that traces each question back to a lecture, a first-year AI literacy course whose schedule and rubrics come from one course model, a mindfulness app that combines touch, sound, and motion, and a tutorial that teaches researchers responsible AI use.</p>
+    <p>Each case says what I built, for whom, and how. Every case has screenshots. Where an app is public you can try it, and the grading assistant can be downloaded with a key. The <a href="{{ '/approach/' | relative_url }}">Approach</a> page connects the builds to my research on AI literacy, assessment, game-based learning, and how people adopt new technology.</p>
   </div>
 </section>
 

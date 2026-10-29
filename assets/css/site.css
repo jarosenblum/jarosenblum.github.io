@@ -356,3 +356,13 @@ main:focus { outline: none; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
+
+/* Unconfirmed facts awaiting the owner. Visible on purpose; the publish gate blocks launch while any remain. */
+.needs {
+  background: var(--caveat-bg);
+  color: var(--ink);
+  font-style: italic;
+  padding: 0 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

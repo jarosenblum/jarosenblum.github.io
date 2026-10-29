@@ -6,7 +6,7 @@ permalink: /work/
 {%- assign cases = site.case_studies | sort: "order" -%}
 <div class="wrap page-top">
   <h1>Work</h1>
-  <p class="measure placeholder">[P3: one or two sentences on how to read this page — what Live, Walkthrough, and Excerpt mean.]</p>
+  <p class="measure">Every case has screenshots. <strong>Live</strong> means you can open it now. <strong>Walkthrough</strong> means it's private or needs setup, so the screenshots and description show how it works. <strong>Excerpt</strong> means I'm sharing parts of a larger system. <strong>Download</strong> means you can install it.</p>
 
   <section aria-labelledby="cases-heading">
     <h2 id="cases-heading">Case studies</h2>
@@ -19,7 +19,7 @@ permalink: /work/
 
   <section class="early" aria-labelledby="early-heading">
     <h2 id="early-heading">Early builds</h2>
-    <p class="measure placeholder">[P3: one sentence framing the strip as the path that led here.]</p>
+    <p class="measure">Earlier things I built, oldest first.</p>
     <ol class="early-strip" tabindex="0" aria-label="Early builds, oldest first">
       {%- for b in site.data.early_builds %}
       <li class="early-card">

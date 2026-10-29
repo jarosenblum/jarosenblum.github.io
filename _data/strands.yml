@@ -1,12 +1,18 @@
 # Approach-page research strands (D5). Case studies reference these by id in
 # `aied_strands`; scripts/check_cases.rb rejects unknown ids.
+# body: CV-sourced, owner-supplied facts only.
 - id: ai-literacy
   label: Humanizing AIED and AI literacy
+  body: "I co-edit *Artificial Intelligence in Education*, a gold open access journal from Emerald Publishing, where I've worked to center humanizing AIED, AI literacy, and workforce readiness. My 2025 foreword, \"Generative AI literacy, a posthumanist perspective,\" appears in *From AI Literacy to Generative AI Literacy* (Springer). I teach generative AI literacy to first-year students in UGS 302."
 - id: workforce
   label: AI-enabled workforce preparation
+  body: "I launched and coordinate the LEAD Certificate at UT Austin, an extended-education program for professional learners, and I've delivered professional learning in research strategy, systems design, and emerging technologies. In McCombs' IROM department, I teach AI fundamentals and information technology to a large lecture of non-business majors."
 - id: assessment
   label: Assessment, feedback, and scaffolding with AI
+  body: "My courses have long relied on rubric-based, authentic assessment of student projects and writing. The builds in this strand ask how AI can carry part of that work while the judgment stays with the instructor."
 - id: game-based
   label: Game-based and immersive learning
+  body: "Before generative AI, most of my design work was games and simulations: design and game audio for Alien Rescue, a problem-based science game that won the 2012 AECT Interactive Learning Award; a Syria conflict simulation run as a three-hour co-curricular workshop; and augmented-reality and Second Life projects. That work earned the 2012 Hudspeth Award for Innovative Instruction at St. Edward's University and an Outstanding Paper award at the 2014 World Conference on Educational Multimedia, Hypermedia and Telecommunications."
 - id: adoption
   label: Adoption and change
+  body: "Much of my research is about how people adopt new technology, and what makes that adoption ethical. I designed and delivered an international extended-education program at Universidad Panamericana in 2023 using diffusion-of-innovation principles, served as Associate Director of NYIT's Center for Teaching and Learning, and was recognized by Emerald Publishing in 2015 for doctoral research on the diffusion of innovation."
