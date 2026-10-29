@@ -1,6 +1,10 @@
 # Site configuration — user site, served from the main branch root (D1, D2).
 title: Jason Rosenblum
 description: AI and education portfolio
+# Link previews (see _layouts/default.html)
+social_image: "/assets/social-card.png"
+social_image_alt: "Jason Rosenblum, AI and education portfolio: I design learning experiences and build the AI tools behind them, for instructors, researchers, and students. Three screenshots from the work."
+social_description: "I design learning experiences and build the AI tools behind them, for instructors, researchers, and students."
 url: "https://jarosenblum.github.io"
 baseurl: ""
 lang: en

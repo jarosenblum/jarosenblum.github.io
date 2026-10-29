@@ -8,6 +8,28 @@
   {%- endunless %}
   <title>{% if page.title and page.url != '/' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.summary | default: site.description }}">
+  {%- comment -%} Link previews (Open Graph / Twitter). Case pages use their first
+       screenshot; every other page uses the site card. URLs must be absolute. {%- endcomment -%}
+  {%- assign og_title = site.title -%}
+  {%- if page.title and page.url != '/' %}{% assign og_title = page.title | append: ' | ' | append: site.title %}{% endif -%}
+  {%- assign og_desc = page.summary | default: site.social_description -%}
+  {%- assign og_shot = page.screenshots | first -%}
+  {%- if og_shot and og_shot.src and og_shot.src != "" -%}
+    {%- assign og_image = og_shot.src -%}{%- assign og_alt = og_shot.alt -%}{%- assign og_w = 1600 -%}{%- assign og_h = 1000 -%}
+  {%- else -%}
+    {%- assign og_image = site.social_image -%}{%- assign og_alt = site.social_image_alt -%}{%- assign og_w = 1200 -%}{%- assign og_h = 630 -%}
+  {%- endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ og_title | escape }}">
+  <meta property="og:description" content="{{ og_desc | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ og_image | absolute_url }}">
+  <meta property="og:image:width" content="{{ og_w }}">
+  <meta property="og:image:height" content="{{ og_h }}">
+  <meta property="og:image:alt" content="{{ og_alt | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ og_image | absolute_url }}">
   <link rel="preload" href="{{ '/assets/fonts/atkinson-hyperlegible-next-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
