@@ -23,7 +23,7 @@ strand_ids = YAML.safe_load(File.read(File.join(ROOT, "_data/strands.yml"), enco
 required = %w[title summary status link_mode]
 # audience, tools, division_of_labor and dates may stay empty: the layout hides
 # empty rows, and docs/pending_inputs.md (Project) tracks what is still owed.
-statuses = ["live", "in use", "beta", "prototype", "early alpha", "partial"]
+statuses = ["live", "in use", "pilot", "beta", "prototype", "early alpha", "partial"]
 modes = %w[live walkthrough excerpt]
 
 problems = []

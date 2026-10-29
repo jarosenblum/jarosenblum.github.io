@@ -2,7 +2,7 @@
 title: "SpeedGrader Rubric Review"
 summary: "A Mac app that drafts rubric-based grading recommendations for an instructor to review in Canvas SpeedGrader. It never submits a grade."
 audience: "Instructors grading written work against a Canvas rubric"
-status: "in use"
+status: "pilot"
 link_mode: "walkthrough"
 caveat: ""
 paid_key: false
@@ -33,6 +33,8 @@ placeholder: false
 A desktop app for grading written work against a rubric. It loads the rubric directly from Canvas's rubric export, along with the assignment description, then drafts a recommendation for each criterion and quotes the passages in the submission that support it. The instructor reads the draft and enters the grade in SpeedGrader themselves.
 
 There are three things it will never do: submit a grade, publish anything to a course, or claim that a submission was written by AI. Those limits are written into the app's rules, not left to habit. Every quote it cites is checked against the submission text, and any quote it can't find is flagged for the instructor instead of being shown as evidence.
+
+It's now in a pilot test with one class: 18 students and two assignments.
 
 Student privacy is built in the same way. The app won't evaluate anything until a class roster is loaded, and before any text leaves the Mac it replaces every roster name with an anonymous tag. The instructor can switch the view to real names to match rows in SpeedGrader, but only the scrubbed text is ever sent.
 
