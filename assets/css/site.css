@@ -344,6 +344,93 @@ main:focus { outline: none; }
 .early-card { scroll-margin-top: 1.5rem; }
 .early-card:target .early-card__name { background: var(--marker); display: inline; }
 
+/* ==========================================================================
+   Data tables (About roles; any future table in page copy)
+   ========================================================================== */
+.data-table, .measure > table:not(.data-table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+}
+.data-table th, .data-table td,
+.measure > table:not(.data-table) th, .measure > table:not(.data-table) td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0.75rem 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.data-table thead th, .measure > table:not(.data-table) thead th {
+  border-bottom: 2px solid var(--ink);
+  font-weight: 700;
+  color: var(--ink);
+}
+.data-table__lead { font-weight: 600; color: var(--ink); }
+.data-table td:not(.data-table__lead) { color: var(--ink-2); }
+.data-table__years { white-space: nowrap; font-variant-numeric: tabular-nums; padding-right: 0; }
+
+/* ==========================================================================
+   Small screens (phones, under 40rem / 640px)
+   Desktop layout is the default above; these rules only adjust for narrow
+   viewports. Horizontal strips stay swipeable but snap and show one clear
+   card plus a peek; galleries and tables stack so nothing is cut off.
+   ========================================================================== */
+@media (max-width: 39.99rem) {
+  :root { --gutter: 16px; }
+
+  h1 { font-size: clamp(1.9rem, 8vw, var(--fs-2xl)); }
+  h2 { margin-top: 1.6em; }
+  .page-top { padding-top: 1.75rem; }
+
+  /* Touch targets: at least ~44px tall for small text links */
+  .site-nav { gap: 1rem; }
+  .site-nav a { display: inline-block; padding-block: 0.6rem; }
+  .case-head__back a { display: inline-block; padding-block: 0.6rem; }
+  .early-card__links a, .strand-links a { display: inline-block; padding-block: 0.35rem; }
+
+  /* Case header: full-width actions, note under each button */
+  .actions { flex-direction: column; align-items: stretch; }
+  .actions .button { text-align: center; }
+
+  /* Case screenshots: stack vertically so captions are never clipped */
+  .gallery__track {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+    gap: 1.25rem;
+  }
+
+  /* Home contact sheet and Work strips: one card plus a peek, snapping */
+  .contact-sheet { grid-auto-columns: 78%; scroll-padding-inline: 0; }
+  .early-strip {
+    grid-auto-columns: 78%;
+    scroll-snap-type: x mandatory;
+  }
+  .early-card { scroll-snap-align: start; }
+  .early-card__note { font-size: var(--fs-base); }
+
+  /* Stacked table: each row becomes a block; header row is visually hidden
+     but kept for assistive tech, and explicit ARIA roles on the markup keep
+     table semantics when display changes. */
+  .data-table--stack thead {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .data-table--stack, .data-table--stack tbody,
+  .data-table--stack tr, .data-table--stack td { display: block; width: 100%; }
+  .data-table--stack tr { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
+  .data-table--stack td { border: 0; padding: 0; }
+  .data-table--stack .data-table__lead { font-size: var(--fs-base); margin-bottom: 0.15rem; }
+  .data-table--stack .data-table__years { margin-top: 0.1rem; font-family: var(--mono); font-size: var(--fs-sm); }
+
+  /* Any other wide table: scroll inside its own box instead of the page */
+  .measure > table:not(.data-table) { display: block; overflow-x: auto; }
+
+  .site-footer { margin-top: 3.5rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
