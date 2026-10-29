@@ -29,7 +29,7 @@
 - name: SQL Coach
   strands: [assessment]
   date: "March 2026"
-  note: "A SQL tutor for MIS 302F that removes its hints question by question, following a written scaffolding plan, and reports concept scores for each session."
+  note: "An AI-supported SQL tutor (React and Python), in production for all 900 MIS 302F students since Spring 2026. Its mastery-gated progression means students can't move on without core mastery; hints fade question by question, following a written scaffolding plan, and each session reports concept scores."
   links:
     - { label: "View the code", url: "https://github.com/jarosenblum/sql-coach-app" }
   screenshot: "/assets/snapshots/early/sql-coach.png"

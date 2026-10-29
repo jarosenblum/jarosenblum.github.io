@@ -12,7 +12,7 @@ lang: en
 contact_email: "jarosenblum@gmail.com"
 # Pre-launch switch. While false, every page carries <meta name="robots"
 # content="noindex"> so search engines skip test builds. Set true at P5.
-launched: false
+launched: true
 
 markdown: kramdown
 kramdown:
