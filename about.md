@@ -3,7 +3,7 @@ title: About
 permalink: /about/
 ---
 
-I'm an Assistant Professor of Instruction in Learning Technologies at the University of Texas at Austin, where I coordinate the LEAD Certificate, and I also teach in the McCombs School of Business's Information, Risk and Operations Management department. I'm Co-Editor-in-Chief of *Artificial Intelligence in Education* (Emerald Publishing).
+I'm an Assistant Professor of Instruction in the McCombs School of Business's Information, Risk and Operations Management department at the University of Texas at Austin. From 2019 to 2025 I taught in Learning Technologies and coordinated the LEAD Certificate. I'm Co-Editor-in-Chief of *Artificial Intelligence in Education* (Emerald Publishing).
 
 ## Roles
 
@@ -12,9 +12,9 @@ I'm an Assistant Professor of Instruction in Learning Technologies at the Univer
     <tr role="row"><th scope="col" role="columnheader">Role</th><th scope="col" role="columnheader">Organization</th><th scope="col" role="columnheader" class="data-table__years">Years</th></tr>
   </thead>
   <tbody role="rowgroup">
-    <tr role="row"><td role="cell" class="data-table__lead">Assistant Professor of Instruction, Learning Technologies, and LEAD Program Coordinator</td><td role="cell">The University of Texas at Austin</td><td role="cell" class="data-table__years">2019–present</td></tr>
     <tr role="row"><td role="cell" class="data-table__lead">Assistant Professor of Instruction, Information, Risk and Operations Management</td><td role="cell">McCombs School of Business, UT Austin</td><td role="cell" class="data-table__years">2026–present</td></tr>
     <tr role="row"><td role="cell" class="data-table__lead">Faculty Associate</td><td role="cell">UTeach, UT Austin</td><td role="cell" class="data-table__years">2026</td></tr>
+    <tr role="row"><td role="cell" class="data-table__lead">Assistant Professor of Instruction, Learning Technologies, and LEAD Program Coordinator</td><td role="cell">The University of Texas at Austin</td><td role="cell" class="data-table__years">2019–2025</td></tr>
     <tr role="row"><td role="cell" class="data-table__lead">Co-Editor-in-Chief</td><td role="cell"><em>Artificial Intelligence in Education</em>, Emerald Publishing</td><td role="cell" class="data-table__years">2024–present</td></tr>
     <tr role="row"><td role="cell" class="data-table__lead">Consultant</td><td role="cell">Rize Education</td><td role="cell" class="data-table__years">2025</td></tr>
     <tr role="row"><td role="cell" class="data-table__lead">International Professor</td><td role="cell">Universidad Panamericana</td><td role="cell" class="data-table__years">2023</td></tr>
